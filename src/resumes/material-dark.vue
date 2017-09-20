@@ -13,19 +13,7 @@
       </div>
       <div class="text">
         <ul>
-          <li> Born {{person.birth.year}} in {{person.birth.location}}</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="icon">
-        <i class="material-icons">location_city</i>
-      </div>
-      <div class="text">
-        <ul>
-          <li>{{person.contact.street}}</li>
-          <li>{{person.contact.city}}</li>
+          <li> Born on {{person.birth.year}}/{{person.birth.month}}/{{person.birth.day}} </li>
         </ul>
       </div>
     </div>
@@ -58,7 +46,6 @@
           <i class="fa fa-github"></i>
         </div>
         <div class="text">
-          <span>@{{person.contact.github}}</span>
           <span>github.com/{{person.contact.github}}</span>
         </div>
       </div>
@@ -74,6 +61,21 @@
         </div>
       </div>
     </a>
+
+    <div class="item last">
+      <div class="section-headline">
+        EDUCATION
+      </div>
+      <div class="skill" v-for="ed in person.education">
+        <div class="right">
+          <div class="block-helper"></div>
+          <div class="headline">{{ed.degree}}</div>
+          <p class="info">
+            {{ed.timeperiod}}, {{ed.description}}
+          </p>
+        </div>
+      </div>
+    </div>
 
     <div class="item last">
       <div class="section-headline">
@@ -104,17 +106,30 @@
       <div class="headline">{{experience.position}} - {{experience.company}}</h3>
         <div class="subheadline">{{experience.timeperiod}}</div>
         <p class="info">
-          {{experience.description}}
+          {{experience.description.label}}
+          <ul>
+            <li class="description-task" v-for="task in experience.description.tasks">
+              {{ task }}
+            </li>
+          </ul>
         </p>
       </div>
     </div>
-    <div class="section-headline">{{ lang.headings.education }}</div>
-    <div class="block" v-for="education in person.education">
+
+    <div class="section-headline"> PROJECTS </div>
+    <div class="block" v-for="proj in person.projects">
       <div class="block-helper"></div>
-      <div class="headline">{{education.degree}}</div>
-      <p class="info">
-        {{education.timeperiod}}, {{education.description}}
-      </p>
+      <div class="headline">{{proj.name}}</h3>
+        <div class="subheadline">{{ proj.teckStack.join(' · ') }}</div>
+        <p class="info">
+          {{proj.description.label}}
+          <ul>
+            <li class="description-task" v-for="feature in proj.description.features">
+              {{ feature }}
+            </li>
+          </ul>
+        </p>
+      </div>
     </div>
   </div>
 
@@ -155,10 +170,6 @@ a {
     text-transform:uppercase;
     display:block;
     font-size:1.17em;
-    -webkit-margin-before:1em;
-    -webkit-margin-after:1em;
-    -webkit-margin-start:0;
-    -webkit-margin-end:0;
     color:white;
     color:rgba(0,0,0,0.7);
     padding-top:0;
@@ -182,9 +193,6 @@ a {
     display:block;
     font-size:0.67em;
     font-size:10pt;
-    -webkit-margin-before:2.33em;
-    -webkit-margin-start:0;
-    -webkit-margin-end:0;
     padding-top:0;
     text-transform:uppercase;
     opacity:0.8;
@@ -276,16 +284,21 @@ h4 {
       color:rgba(0,0,0,0.870588);
     }
     .subheadline {
+      margin: 8px 0 0 0;
       color:rgba(0,0,0,0.541176);
       display:block;
       font-size:14px;
       font-weight:300;
     }
     .info {
+      margin-top: -8px;
       font-size:14px;
       color:rgba(0,0,0,0.870588);
       margin-bottom:0;
       padding-top:20px;
+    }
+    .description-task::before {
+      content: '·  '
     }
     .icon {
       width:16%;

@@ -36,7 +36,7 @@ export const fix = elements => {
   document.body.innerHTML += generatedElements;
   elementsWithShadows.forEach((el, i) => {
     const element = document.querySelector('#chrome-shadow-fixer-' + i);
-    element.style.height = el.height;
+    element.style.height = el.height + 1;
     element.style.width = el.width;
     element.style.left = el.left;
     element.style.top = el.top;

@@ -1,88 +1,108 @@
 /* eslint-disable */
 export const PERSON = {
   name: {
-    first: 'John',
+    first: 'Xu',
     middle: '',
-    last: 'Doe',
+    last: 'Hu',
   },
-  about: 'Hi, my name is John Doe. I\'m just about the most boring type of person you could possibly imagine. I like collecting leaves from the tree in my back yard and documenting each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.',
-  position: 'Software Developer',
+  position: 'Senior Software Engineer',
   birth: {
-    year: 1990,
-    location: 'New York'
+    year: '1992',
+    month: '05',
+    day: '07'
   },
-  experience: [{
-      company: 'Company A',
-      position: 'Developer',
-      timeperiod: 'since January 2016',
-      description: 'Programming and watching cute cat videos.'
-    },
-    {
-      company: 'Company B',
-      position: 'Frontend Developer',
-      timeperiod: 'January 2015 - December 2015',
-      description: 'Fulfillment of extremely important tasks.'
-    },
-    {
-      company: 'Company C',
-      position: 'Trainee',
-      timeperiod: 'March 2014 - December 2014',
-      description: 'Making coffee and baking cookies.'
-    }
-  ],
   education: [{
-      degree: 'Master of Arts',
-      timeperiod: 'March 2012 - December 2013',
-      description: 'Major in Hacking and Computer Penetration, University A, New York, USA.'
-    },
-    {
-      degree: 'Bachelor of Science',
-      timeperiod: 'March 2009 - December 2011',
-      description: 'Major in Engineering, University B, Los Angeles, USA.'
+    degree: 'Bachelor of Computer Science',
+    timeperiod: '2010/09 - 2014/06',
+    description: 'Harbin Institute of Technology'
+  }],
+  experience: [{
+    company: 'FreeWheel',
+    position: 'Senior Software Engineer',
+    timeperiod: 'since July 2014',
+    description: {
+      label: 'Working as a full-stack web developer in UI team.',
+      tasks: [
+        'Maintain legacy UI system buding with RoR and jQuery.',
+        'Use an internal frontwork SparkUI to refactor the frontend.'
+      ]
     }
-  ],
+  }],
+  projects: [{
+    name: 'react-go-boilerplate' ,
+    url: 'http://github.com/MrHuxu/react-go-boilerplate',
+    teckStack: [ 'React.js', 'Redux', 'Webpack', 'blessed', 'Go', 'Docker' ],
+    description: {
+      label: 'A boilerplate for fastly building the frontend & backend separated web application.',
+      features: [
+        'Support hot reload for both frontend & backend.',
+        'Provide a dashboard based on blessed in development mode.',
+        'Support using Docker to deploy the application.'
+      ]
+    }
+  }, {
+    name: 'blogo' ,
+    url: 'http://blog.xhu.me',
+    teckStack: [ 'Go' ],
+    description: {
+      label: 'A static blog system.',
+      features: [
+        'Use Go to build the server and render the page with http/template.',
+        'Posts are stored as Markdown docs.'
+      ]
+    }
+  }, {
+    name: 'bar' ,
+    url: 'http://bar.xhu.me',
+    teckStack: [ 'React.js', 'Redux', 'Go', 'MongoDB' ],
+    description: {
+      label: 'A small twitter system.',
+      features: [
+        'Any visitors who get access can publish/append/reply a post.',
+        'Frontend & backend separated.',
+        'Contents are stored in MongoDB.'
+      ]
+    }
+  }, {
+    name: 'yrel' ,
+    url: 'http://yrel.xhu.me',
+    teckStack: [ 'Go', 'Yacc', 'React.js', 'Redux' ],
+    description: {
+      label: 'A small script language.',
+      features: [
+        'Use Go to implement the Lexer.',
+        'Use goyacc to generator the Parser.',
+        'Get the AST of the source code and directly execute it.'
+      ]
+    }
+  }],
   // skill level goes 0 to 100
   skills: [{
-      name: 'HTML5',
-      level: '99'
-    },
-    {
-      name: 'CSS3',
-      level: '95'
-    },
-    {
-      name: 'JavaScript',
-      level: '97'
-    },
-    {
-      name: 'Node.js',
-      level: '93'
-    },
-    {
-      name: 'Angular 2',
-      level: '60'
-    },
-    {
-      name: 'TypeScript',
-      level: '80'
-    },
-    {
-      name: 'ES.Next',
-      level: '70'
-    },
-    {
-      name: 'Docker',
-      level: '99'
-    }
-  ],
+    name: 'HTML & CSS',
+    level: '60'
+  }, {
+    name: 'React.js & Redux',
+    level: '75'
+  }, {
+    name: 'Node.js',
+    level: '70'
+  }, {
+    name: 'Ruby on Rails',
+    level: '80'
+  }, {
+    name: 'Go',
+    level: '65'
+  }, {
+    name: 'Docker',
+    level: '60'
+  }],
   skillDescription: 'Also proficient in Adobe Photoshop and Illustrator, grew up bilingual (English and Klingon).',
   contact: {
-    email: 'john.doe@email.com',
-    phone: '0123 456789',
-    street: '1234 Broadway',
-    city: 'New York',
-    website: 'johndoe.com',
-    github: 'johnyD'
+    email: 'hxtheone@email.com',
+    phone: '18609669205',
+    'wechat & qq': '990860979',
+    github: 'MrHuxu',
+    website: 'xhu.me'
   },
   lang: 'en' // en, de, fr, pt, cn, it
 };
