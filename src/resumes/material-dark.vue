@@ -5,7 +5,7 @@
     <div class="heading" id="myselfpic">
     </div>
     <div class="section-headline">
-      {{ lang.headings.contact }}
+      个人信息
     </div>
     <div class="item">
       <div class="icon">
@@ -13,7 +13,7 @@
       </div>
       <div class="text">
         <ul>
-          <li> Born on {{person.birth.year}}/{{person.birth.month}}/{{person.birth.day}} </li>
+          <li> {{person.birth.year}}/{{person.birth.month}}/{{person.birth.day}} </li>
         </ul>
       </div>
     </div>
@@ -64,7 +64,7 @@
 
     <div class="item last">
       <div class="section-headline">
-        EDUCATION
+         教育经历
       </div>
       <div class="skill" v-for="ed in person.education">
         <div class="right">
@@ -79,7 +79,7 @@
 
     <div class="item last">
       <div class="section-headline">
-        {{ lang.headings.skills }}
+        技术评价
       </div>
       <div class="skill" v-for="skill in person.skills">
         <div class="right">
@@ -100,7 +100,7 @@
       <div>{{person.position}}</div>
     </div>
 
-    <div class="section-headline">{{ lang.headings.experience }}</div>
+    <div class="section-headline"> 工作经历 </div>
     <div class="block" v-for="experience in person.experience">
       <div class="block-helper"></div>
       <div class="headline">{{experience.position}} - {{experience.company}}</h3>
@@ -116,7 +116,7 @@
       </div>
     </div>
 
-    <div class="section-headline"> PROJECTS </div>
+    <div class="section-headline"> 个人项目 </div>
     <div class="block" v-for="proj in person.projects">
       <div class="block-helper"></div>
       <div class="headline">{{proj.name}}</h3>
@@ -165,7 +165,9 @@ a {
   right:25px;
   padding-left:20px;
   padding-top:20px;
+  padding-bottom:20px;
   bottom:25px;
+  border-bottom: 1px solid gray;
   h2 {
     text-transform:uppercase;
     display:block;

@@ -1,30 +1,30 @@
 /* eslint-disable */
 export const PERSON = {
   name: {
-    first: 'Xu',
-    middle: '',
-    last: 'Hu',
+    first: '胡',
+    middle: '旭'
   },
-  position: 'Senior Software Engineer',
+  position: '高级开发工程师',
   birth: {
     year: '1992',
     month: '05',
     day: '07'
   },
   education: [{
-    degree: 'Bachelor of Computer Science',
+    degree: ' 计算机科学学士学位',
     timeperiod: '2010/09 - 2014/06',
-    description: 'Harbin Institute of Technology'
+    description: '哈尔滨工业大学'
   }],
   experience: [{
     company: 'FreeWheel',
-    position: 'Senior Software Engineer',
-    timeperiod: 'since July 2014',
+    position: '高级开发工程师',
+    timeperiod: '2014/07 至今',
     description: {
-      label: 'Working as a full-stack web developer in UI team.',
+      label: '在 UI 团队从事全栈开发的职位.',
       tasks: [
-        'Maintain legacy UI system buding with RoR and jQuery.',
-        'Use an internal frontwork SparkUI to refactor the frontend.'
+        '维护我们团队使用 RoR 和 jQuery 编写的旧 UI 系统.',
+        '使用公司内部的 SparkUI 完整重构一个模块的前端代码',
+        '在纽约工作 3 个月时间, 给美国同事提供技术支持'
       ]
     }
   }],
@@ -33,11 +33,11 @@ export const PERSON = {
     url: 'http://github.com/MrHuxu/react-go-boilerplate',
     teckStack: [ 'React.js', 'Redux', 'Webpack', 'blessed', 'Go', 'Docker' ],
     description: {
-      label: 'A boilerplate for fastly building the frontend & backend separated web application.',
+      label: '一个用于快速搭建前后算分离的 Web 应用的脚手架.',
       features: [
-        'Support hot reload for both frontend & backend.',
-        'Provide a dashboard based on blessed in development mode.',
-        'Support using Docker to deploy the application.'
+        '前后端代码都支持热更新.',
+        '在开发模式下提供了一个基于 blessed 搭建的 dashboard.',
+        '支持用 Docker 进行部署.'
       ]
     }
   }, {
@@ -45,10 +45,10 @@ export const PERSON = {
     url: 'http://blog.xhu.me',
     teckStack: [ 'Go' ],
     description: {
-      label: 'A static blog system.',
+      label: '一个静态博客系统.',
       features: [
-        'Use Go to build the server and render the page with http/template.',
-        'Posts are stored as Markdown docs.'
+        '使用 Go 搭建后端 server.',
+        '文章以 Markdown 的形式进行存储.'
       ]
     }
   }, {
@@ -56,11 +56,11 @@ export const PERSON = {
     url: 'http://bar.xhu.me',
     teckStack: [ 'React.js', 'Redux', 'Go', 'MongoDB' ],
     description: {
-      label: 'A small twitter system.',
+      label: ' 一个小型的 twitter 系统.',
       features: [
-        'Any visitors who get access can publish/append/reply a post.',
-        'Frontend & backend separated.',
-        'Contents are stored in MongoDB.'
+        '任何访问者在获得权限后可以发布/扩展/回复一条 post.',
+        '使用 React 和 Go 进行前后端分离开发.',
+        '内容使用 MongoDB 进行存储.'
       ]
     }
   }, {
@@ -68,11 +68,11 @@ export const PERSON = {
     url: 'http://yrel.xhu.me',
     teckStack: [ 'Go', 'Yacc', 'React.js', 'Redux' ],
     description: {
-      label: 'A small script language.',
+      label: '一个小型的脚本语言.',
       features: [
-        'Use Go to implement the Lexer.',
-        'Use goyacc to generator the Parser.',
-        'Get the AST of the source code and directly execute it.'
+        '使用 Go 实现了词法分析器.',
+        '使用 goyacc 生成语法分析起.',
+        '最后获得源码的抽象语法树并直接执行.'
       ]
     }
   }],
