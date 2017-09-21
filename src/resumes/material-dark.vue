@@ -116,13 +116,57 @@
       </div>
     </div>
 
-    <div class="section-headline"> 个人项目 </div>
-    <div class="block" v-for="proj in person.projects">
+    <div class="section-headline"> 项目经验 </div>
+
+    <div class="block">
       <div class="block-helper"></div>
-      <div class="headline">{{proj.name}}</h3>
+      <div class="headline">{{person.projects[0].name}} - {{person.projects[0].description.label}}</h3>
+        <div class="subheadline">{{ person.projects[0].teckStack.join(' · ') }}</div>
+        <p class="info">
+          <strong>性能问题</strong>:
+          <ul>
+            <li class="description-task" v-for="feature in person.projects[0].description.features['性能问题']">
+              {{ feature }}
+            </li>
+          </ul>
+          <br />
+          <strong>质量控制</strong>:
+          <ul>
+            <li class="description-task" v-for="feature in person.projects[0].description.features['质量控制']">
+              {{ feature }}
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block-helper"></div>
+      <div class="headline">{{person.projects[1].name}} - {{person.projects[1].description.label}}</h3>
+        <div class="subheadline">{{ person.projects[1].teckStack.join(' · ') }}</div>
+        <p class="info">
+          <strong>项目设计</strong>:
+          <ul>
+            <li class="description-task" v-for="feature in person.projects[1].description.features['项目设计']">
+              {{ feature }}
+            </li>
+          </ul>
+          <br />
+          <strong>代码重构</strong>:
+          <ul>
+            <li class="description-task" v-for="feature in person.projects[1].description.features['代码重构']">
+              {{ feature }}
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+
+    <div class="block" v-for="proj in person.projects.slice(2)">
+      <div class="block-helper"></div>
+      <div class="headline">{{proj.name}} - {{proj.description.label}}</h3>
         <div class="subheadline">{{ proj.teckStack.join(' · ') }}</div>
         <p class="info">
-          {{proj.description.label}}
           <ul>
             <li class="description-task" v-for="feature in proj.description.features">
               {{ feature }}
@@ -280,7 +324,7 @@ h4 {
     display:inline-block;
     box-shadow:0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
     .headline {
-      font-weight:300;
+      font-weight:400;
       display:block;
       font-size:15px;
       color:rgba(0,0,0,0.870588);
@@ -455,7 +499,7 @@ h4 {
   }
 }
 #myselfpic {
-  background-image:url('../assets/person.jpg');
+  background-image:url('../assets/WechatIMG202.jpeg');
   color:black;
 }
 #githubIcon {
