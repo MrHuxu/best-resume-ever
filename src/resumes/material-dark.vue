@@ -51,7 +51,7 @@
       </div>
     </a>
 
-    <a :href="person.contact.website" target="_blank">
+    <a :href="'http://' + person.contact.website" target="_blank">
       <div class="item">
         <div class="icon">
           <i class="material-icons">language</i>
