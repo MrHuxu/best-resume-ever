@@ -22,16 +22,29 @@ export const PERSON = {
     description: {
       label: '在 UI 团队从事全栈开发的职位.',
       tasks: [
-        '在 RoR 和 jQuery 的基础上对公司 UI 项目进行持续开发和维护.',
+        '在 Ruby on Rails 和 jQuery 的基础上对公司 UI 项目进行持续开发和维护.',
         '使用公司内部的 SparkUI 完整重构一个项目的前端代码.',
         '深入挖掘工作痛点, 通过开发各种自动化工具, 提升团队的工作效率.',
-        '在纽约出差三个月, 跟美国工程师进行技术交流, 并且未 Service Team 提供技术支持.'
+        '在纽约出差三个月, 跟美国工程师进行技术交流, 并且为 Service Team 提供技术支持.',
+        '熟练使用 Go 重写现有项目, 并且在团队使用 SOA 架构之后独立负责一个公共基础模块的研发.'
       ]
     }
   }],
   projects: [{
-    name: 'HyLDA' ,
-    teckStack: [ 'Ruby on Rails', 'jQuery', 'Redis', 'MySQL' ],
+    name: 'Workflow Service',
+    teckStack: ['Go', 'gRPC'],
+    description: {
+      label: '为公司业务提供流程控制的基础服务组件',
+      features: [
+        '独立完成项目的技术 design, 注重与服务之间的解耦, 并且适当暴露接口以便于优化和扩展.',
+        '代码采用清晰的分层结构, 下层方法通过接口被上层调用, 适当解耦的同时也便于编写单元测试.',
+        '每一层都贯彻 \'单一职责原则\', 提高方法的可复用性.',
+        '代码的单元覆盖率达到 85% 以上'
+      ]
+    }
+  }, {
+    name: 'HyLDA',
+    teckStack: ['Ruby on Rails', 'jQuery', 'Redis', 'MySQL'],
     description: {
       label: '线性广告和数字广告混合投放系统的 UI 部分.',
       features: {
@@ -47,8 +60,8 @@ export const PERSON = {
       }
     }
   }, {
-    name: 'SparkUI Adoption' ,
-    teckStack: [ 'React.js', 'Redux' ],
+    name: 'SparkUI Adoption',
+    teckStack: ['React.js', 'Redux'],
     description: {
       label: '带领一个团队使用内部的 SparkUI 框架对 HyLDA 模块进行完整的前端替换.',
       features: {
@@ -65,26 +78,15 @@ export const PERSON = {
       }
     }
   }, {
-    name: 'Bug Bash Tool' ,
-    teckStack: [ 'React.js', 'Redux', 'Express.js', 'Go', 'MongoDB' ],
+    name: 'Bug Bash Tool',
+    teckStack: ['Ruby on Rails', 'React.js', 'Redux', 'Express.js', 'Go', 'MongoDB'],
     description: {
       label: '内部的一个统计特定 Jira ticket 的工具.',
       features: [
-        '初始版本使用 RoR 和 React.js 实现了完整的前后端分离开发.',
+        '初始版本使用 Ruby on Rails 和 React.js 实现了完整的前后端分离开发.',
         '将后端使用 Node.js 进行了重写, 实现数据的并行获取, 了解了 ES6 原生的 Promise 规范, 并对前端代码进行了部分重构.',
         '在 Jira 速度太慢的前提下, 采用 redis 作为数据缓存, 提升了页面整体响应速度.',
         '使用自己写的脚手架用 Go 重写后端代码, 使用 MongoDB 持久化数据.'
-      ]
-    }
-  }, {
-    name: 'SparkUI Playground' ,
-    teckStack: [ 'React.js', 'Redux', 'Webpack', 'Express.js', 'MongoDB' ],
-    description: {
-      label: ' 在浏览器中编写和运行 SparkUI 组件的工具.',
-      features: [
-        '使用上传代码在后台运行 Webpack 打包的方式, 可以在浏览器里预览代码结果.',
-        '学习 Webpack 参数的配置, 优化打包时间和打包之后的文件大小.',
-        '使用 Express.js 编写后端 server, 使用 MongoDB 持久化数据.'
       ]
     }
   }],
@@ -94,25 +96,23 @@ export const PERSON = {
     level: '60'
   }, {
     name: 'React.js & Redux',
-    level: '75'
+    level: '70'
   }, {
     name: 'Node.js',
     level: '70'
   }, {
     name: 'Ruby on Rails',
-    level: '80'
+    level: '60'
   }, {
     name: 'Go',
-    level: '65'
+    level: '73'
   }, {
     name: 'Docker',
-    level: '60'
+    level: '50'
   }],
-  skillDescription: 'Also proficient in Adobe Photoshop and Illustrator, grew up bilingual (English and Klingon).',
   contact: {
-    email: 'hxtheone@email.com',
+    email: 'hxtheone@gmail.com',
     phone: '18609669205',
-    'wechat & qq': '990860979',
     github: 'MrHuxu',
     website: 'xhu.me'
   },

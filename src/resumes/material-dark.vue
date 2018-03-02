@@ -51,7 +51,7 @@
       </div>
     </a>
 
-    <a :href="person.contact.website" target="_blank">
+    <a :href="'http://' + person.contact.website" target="_blank">
       <div class="item">
         <div class="icon">
           <i class="material-icons">language</i>
@@ -118,21 +118,13 @@
 
     <div class="section-headline"> 项目经验 </div>
 
-    <div class="block">
+    <div class="block" v-for="proj in person.projects.slice(0, 1)">
       <div class="block-helper"></div>
-      <div class="headline">{{person.projects[0].name}} - {{person.projects[0].description.label}}</h3>
-        <div class="subheadline">{{ person.projects[0].teckStack.join(' · ') }}</div>
+      <div class="headline">{{proj.name}} - {{proj.description.label}}</h3>
+        <div class="subheadline">{{ proj.teckStack.join(' · ') }}</div>
         <p class="info">
-          <strong>性能问题</strong>:
           <ul>
-            <li class="description-task" v-for="feature in person.projects[0].description.features['性能问题']">
-              {{ feature }}
-            </li>
-          </ul>
-          <br />
-          <strong>质量控制</strong>:
-          <ul>
-            <li class="description-task" v-for="feature in person.projects[0].description.features['质量控制']">
+            <li class="description-task" v-for="feature in proj.description.features">
               {{ feature }}
             </li>
           </ul>
@@ -145,16 +137,16 @@
       <div class="headline">{{person.projects[1].name}} - {{person.projects[1].description.label}}</h3>
         <div class="subheadline">{{ person.projects[1].teckStack.join(' · ') }}</div>
         <p class="info">
-          <strong>项目设计</strong>:
+          <strong>性能问题</strong>:
           <ul>
-            <li class="description-task" v-for="feature in person.projects[1].description.features['项目设计']">
+            <li class="description-task" v-for="feature in person.projects[1].description.features['性能问题']">
               {{ feature }}
             </li>
           </ul>
           <br />
-          <strong>代码重构</strong>:
+          <strong>质量控制</strong>:
           <ul>
-            <li class="description-task" v-for="feature in person.projects[1].description.features['代码重构']">
+            <li class="description-task" v-for="feature in person.projects[1].description.features['质量控制']">
               {{ feature }}
             </li>
           </ul>
@@ -162,7 +154,29 @@
       </div>
     </div>
 
-    <div class="block" v-for="proj in person.projects.slice(2)">
+    <div class="block">
+      <div class="block-helper"></div>
+      <div class="headline">{{person.projects[2].name}} - {{person.projects[2].description.label}}</h3>
+        <div class="subheadline">{{ person.projects[2].teckStack.join(' · ') }}</div>
+        <p class="info">
+          <strong>项目设计</strong>:
+          <ul>
+            <li class="description-task" v-for="feature in person.projects[2].description.features['项目设计']">
+              {{ feature }}
+            </li>
+          </ul>
+          <br />
+          <strong>代码重构</strong>:
+          <ul>
+            <li class="description-task" v-for="feature in person.projects[2].description.features['代码重构']">
+              {{ feature }}
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+
+    <div class="block" v-for="proj in person.projects.slice(3)">
       <div class="block-helper"></div>
       <div class="headline">{{proj.name}} - {{proj.description.label}}</h3>
         <div class="subheadline">{{ proj.teckStack.join(' · ') }}</div>
