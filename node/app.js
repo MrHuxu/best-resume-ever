@@ -49,11 +49,13 @@ const convert = async() => {
   console.log('Finished exports.');
 };
 
+const RESUME_FILE_NAME = 'Resule - 胡旭 - Go - 全栈';
+
 const electroshotScript = resume => {
   const dir = path.join(__dirname, '../pdf');
   return 'electroshot localhost:8080/#/resume/' + resume +
     ' 2481x3508 --pdf-margin none --format pdf --out ' + dir +
-    ' --filename "' + resume + '.pdf" --pdf-background';
+    ' --filename "' + RESUME_FILE_NAME + '.pdf" --pdf-background';
 };
 
 const getResumesFromDirectories = () => {
@@ -71,7 +73,8 @@ const getResumesFromDirectories = () => {
 const getDirectories = () => {
   const srcpath = path.join(__dirname, '../src/resumes');
   return fs.readdirSync(srcpath)
-    .filter(file => file !== 'resumes.js' && file !== 'template.vue');
+    // .filter(file => file !== 'resumes.js' && file !== 'template.vue');
+    .filter(file => file === 'material-dark.vue');
 };
 
 const execBash = script => {
