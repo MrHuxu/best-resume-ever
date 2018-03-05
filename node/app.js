@@ -49,13 +49,13 @@ const convert = async() => {
   console.log('Finished exports.');
 };
 
-const RESUME_FILE_NAME = 'Resule - 胡旭 - Go - 全栈';
+const RESUMES_FILE_NAME = 'Resumes - 胡旭 - Go - 全栈';
 
 const electroshotScript = resume => {
   const dir = path.join(__dirname, '../pdf');
   return 'electroshot localhost:8080/#/resume/' + resume +
     ' 2481x3508 --pdf-margin none --format pdf --out ' + dir +
-    ' --filename "' + RESUME_FILE_NAME + '.pdf" --pdf-background';
+    ' --filename "' + RESUMES_FILE_NAME + '.pdf" --pdf-background';
 };
 
 const getResumesFromDirectories = () => {
